@@ -1,0 +1,79 @@
+:root {
+  --color-accent: hsl(202, 50%, 14%);
+  --color-accent-lighter: hsl(201, 11%, 47%);
+  --color-white: hsl(200, 100%, 99%);
+  --color-gray: hsl(0, 0%, 46%);
+  --color-gray-lighter: rgba(218, 218, 218, 1);
+  --color-black-lighter: rgba(0, 0, 0, 0.4);
+  --section-horizontal-padding: 60px;
+}
+
+body {
+  font-family: Josefin Sans, sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-accent);
+}
+
+main {
+  padding: 0 var(--section-horizontal-padding);
+}
+
+h1,
+h2 {
+  font-family: Frank Ruhl Libre, sans-serif;
+}
+
+/*/////////////////////////////////*/
+/*            HEADER              */
+/*/////////////////////////////////*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px var(--section-horizontal-padding);
+  position: relative;
+}
+
+.logo {
+  display: block;
+  object-fit: cover;
+}
+
+.header__navigation ul {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__navigation button {
+  padding: 12px;
+  text-wrap: nowrap;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button--fill {
+  font-size: 1.25rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+
+  transition: background-color, 5s;
+
+  &:hover {
+    transition: background-color, 0.2s;
+    background-color: var(--color-accent-lighter);
+  }
+}
