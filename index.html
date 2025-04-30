@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" type="text/css" href="./src/styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/components.css" />
     <link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
     <title>App</title>
   </head>
@@ -20,14 +21,70 @@
       <img src="public/logo.svg" alt="Logo" class="logo" />
       <nav class="header__navigation">
         <ul>
-          <li><button>About us</button></li>
-          <li><button>Contact</button></li>
-          <li><button>News</button></li>
+          <li><button class="nav__item">About us</button></li>
+          <li><button class="nav__item">Contact</button></li>
+          <li><button class="nav__item">News</button></li>
         </ul>
       </nav>
-      <button class="button--fill">Subscribe</button>
+      <button class="button button--fill" id="desktop--header__button">
+        Subscribe
+      </button>
+      <button class="button button--icon" id="mobile--header__button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
     </header>
+    <main>
+      <section></section>
+    </main>
 
+    <dialog class="dialog">
+      <header class="dialog__header">
+        <img src="public/logo.svg" alt="Logo" class="logo" />
+        <button
+          class="button button--icon dialog__button--icon"
+          id="close-dialog"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgba(18, 41, 54, 1)"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </header>
+      <nav class="dialog__navigation">
+        <ul>
+          <li><button class="nav__item">About us</button></li>
+          <li><button class="nav__item">Contact</button></li>
+          <li><button class="nav__item">News</button></li>
+        </ul>
+      </nav>
+      <button class="button button--fill">Subscribe</button>
+    </dialog>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
