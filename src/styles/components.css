@@ -15,9 +15,39 @@
     background-color: var(--color-accent);
     color: var(--color-white);
     transition: background-color, 5s;
+
     &:hover {
       transition: background-color, 0.2s;
       background-color: var(--color-accent-lighter);
     }
+  }
+
+  /* Dialog */
+  .dialog {
+    z-index: 101;
+    border: none;
+    background-color: var(--color-white);
+    position: absolute;
+  }
+
+  /* Heading */
+
+  .heading-4 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .sub-heading {
+    font-size: 20px;
+    color: var(--color-gray);
+  }
+
+  /* Margins */
+
+  .mb-16 {
+    margin-bottom: 16px;
+  }
+  .mb-20 {
+    margin-bottom: 20px;
   }
 }

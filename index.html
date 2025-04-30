@@ -26,10 +26,12 @@
           <li><button class="nav__item">News</button></li>
         </ul>
       </nav>
-      <button class="button button--fill" id="desktop--header__button">
+      <button
+        class="open-dialog-follow open-dialog-follow-desktop button button--fill"
+      >
         Subscribe
       </button>
-      <button class="button button--icon" id="mobile--header__button">
+      <button class="button button--icon" id="open-dialog-menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -48,16 +50,17 @@
         </svg>
       </button>
     </header>
+
     <main>
       <section></section>
     </main>
 
-    <dialog class="dialog">
-      <header class="dialog__header">
+    <dialog class="dialog dialog-menu">
+      <header class="dialog-menu__header">
         <img src="public/logo.svg" alt="Logo" class="logo" />
         <button
-          class="button button--icon dialog__button--icon"
-          id="close-dialog"
+          class="button button--icon dialog-menu__button--close"
+          id="close-dialog-menu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,14 +79,47 @@
           </svg>
         </button>
       </header>
-      <nav class="dialog__navigation">
+      <nav class="dialog-menu__navigation">
         <ul>
           <li><button class="nav__item">About us</button></li>
           <li><button class="nav__item">Contact</button></li>
           <li><button class="nav__item">News</button></li>
         </ul>
       </nav>
-      <button class="button button--fill">Subscribe</button>
+      <button class="open-dialog-follow button button--fill">Subscribe</button>
+    </dialog>
+    <dialog class="dialog dialog-follow">
+      <button
+        class="button button--icon dialog-follow__button--close"
+        id="close-dialog-follow"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="rgba(18, 41, 54, 1)"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="dialog-follow__image">
+        <img src="/public/subscribe-image.jpg" alt="" />
+      </div>
+      <div class="dialog-follow__text">
+        <h4 class="heading-4 mb-16">Follow the latest news</h4>
+        <p class="sub-heading mb-20">With our daily newsletter</p>
+        <form class="dialog-follow__form">
+          <input placeholder="you@example.com" />
+          <button class="button button--fill" type="submit">Submit</button>
+        </form>
+      </div>
     </dialog>
     <script type="module" src="/src/main.js"></script>
   </body>
