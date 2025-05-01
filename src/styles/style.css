@@ -25,12 +25,13 @@
   }
 
   h1,
-  h2 {
+  h2,
+  h3 {
     font-family: Frank Ruhl Libre, sans-serif;
   }
 }
 
-@layer component {
+@layer components {
   /*  Buttons  */
   .button {
     font-size: 1.25rem;
@@ -63,15 +64,27 @@
   }
 
   /* Heading */
+  .heading--1 {
+    /* font-size: 6rem; */
+    font-size: clamp(3.5rem, 10vw - 2rem, 5rem);
+    font-weight: 400;
+    color: var(--color-accent);
+  }
 
-  .heading-4 {
-    font-weight: 700;
-    font-size: 24px;
+  .heading--3 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-accent);
   }
 
   .sub-heading {
-    font-size: 20px;
-    color: var(--color-gray);
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .heading--4 {
+    font-weight: 700;
+    font-size: 24px;
   }
 
   /* Margins */
@@ -100,6 +113,18 @@
 
     animation: liftUp 1s both;
   }
+
+  /* Horizontal Line  */
+
+  .line {
+    position: absolute;
+    width: 1000%;
+    border: 1px solid var(--color-accent);
+    left: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
 }
 
 @layer main {
@@ -113,6 +138,8 @@
     padding: 32px var(--section-horizontal-padding);
     position: sticky;
     top: 0;
+    background-color: var(--color-white);
+    z-index: 50;
   }
 
   .logo {
@@ -130,7 +157,7 @@
   }
 
   .nav__item {
-    padding: 12px;
+    font-size: 1.25rem;
     text-wrap: nowrap;
     padding: 12px;
     background-color: transparent;
@@ -224,6 +251,11 @@
     overflow: clip;
   }
 
+  .dialog__sub-heading {
+    font-size: 20px;
+    color: var(--color-gray);
+  }
+
   .dialog-subscribe__form {
     display: flex;
     gap: 12px;
@@ -240,6 +272,62 @@
     position: absolute;
     top: 16px;
     right: 16px;
+  }
+
+  /*/////////////////////////////////*/
+  /*            Hero Section         */
+  /*/////////////////////////////////*/
+  .hero {
+    padding: 64px 0;
+    overflow: clip;
+    display: grid;
+    row-gap: 64px;
+  }
+
+  .hero__text-container {
+    display: grid;
+    row-gap: 32px;
+  }
+
+  .hero__heading {
+    width: 100%;
+    text-align: end;
+    font-size: clamp(3.5rem, 10vw - 2rem, 5rem);
+  }
+
+  .hero__sub-heading {
+    padding: 0 16px;
+    max-width: 560px;
+    transform: translateX(10%);
+    background-color: var(--color-white);
+  }
+
+  .hero__wrapper-sub-heading {
+    position: relative;
+  }
+
+  .hero__image {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    display: block;
+  }
+
+  /*/////////////////////////////////*/
+  /*            Sun-Hero Section         */
+  /*/////////////////////////////////*/
+
+  .sub-hero__text-container {
+    padding: 32px 0;
+    display: flex;
+    border-bottom: 1px solid var(--color-accent);
+    gap: clamp(2.5rem, 13.8vw - 5.25rem, 8.125rem);
+  }
+
+  .sub-hero__sub-heading {
+    max-width: 540px;
+    font-size: 1.25rem;
+    line-height: 2;
   }
 }
 
@@ -263,6 +351,10 @@
     .header__navigation,
     .open-dialog-subscribe-desktop {
       display: none;
+    }
+
+    .nav__item {
+      font-size: 1rem;
     }
 
     #open-dialog-menu {
@@ -306,6 +398,52 @@
     .toast {
       padding: 8px 16px;
       font-size: 0.875rem;
+    }
+
+    /*/////////////////////////////////*/
+    /*            Hero                */
+    /*/////////////////////////////////*/
+    .hero {
+      padding: 40px 0;
+      row-gap: 32px;
+    }
+
+    .hero__text-container {
+      row-gap: 12px;
+    }
+
+    .hero__sub-heading {
+      font-size: 1rem;
+      transform: translateX(0%);
+    }
+
+    .hero__wrapper-sub-heading .line {
+      display: none;
+    }
+
+    /*/////////////////////////////////*/
+    /*           Sub Hero              */
+    /*/////////////////////////////////*/
+
+    .sub-hero__text-container {
+      flex-direction: column;
+      gap: 8px;
+      padding: 0 0 40px;
+    }
+
+    .sub-hero__heading {
+      font-size: 1.5rem;
+    }
+    .sub-hero__sub-heading {
+      font-size: 1rem;
+    }
+
+    /*/////////////////////////////////*/
+    /*            Headings              */
+    /*/////////////////////////////////*/
+
+    .heading--1 {
+      font-size: 1.75rem;
     }
   }
 }
