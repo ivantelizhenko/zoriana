@@ -519,8 +519,45 @@
     display: grid;
     place-content: center;
     padding: 72px 0 104px;
-
     text-align: center;
+  }
+  /*/////////////////////////////////*/
+  /*              Footer             */
+  /*/////////////////////////////////*/
+  .footer {
+    padding: 32px 60px;
+    display: grid;
+    grid-template-areas: "logo nav button";
+    justify-content: space-between;
+    background-color: var(--color-accent);
+    position: relative;
+  }
+
+  .footer__logo {
+    grid-area: logo;
+  }
+
+  .footer__navigation {
+    grid-area: nav;
+  }
+
+  .footer__navigation ul {
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .footer .nav__item {
+    color: var(--color-white);
+  }
+
+  .footer .button {
+    grid-area: button;
+    width: fit-content;
+    margin-left: auto;
   }
 }
 
@@ -780,6 +817,31 @@
     .subscribe {
       padding: 24px 0;
       margin-bottom: 40px;
+    }
+
+    /*/////////////////////////////////*/
+    /*               Footer            */
+    /*/////////////////////////////////*/
+
+    .footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "nav"
+        "button"
+        "logo";
+      row-gap: 24px;
+      justify-items: center;
+    }
+
+    .footer ul {
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer .button {
+      margin: 0;
     }
   }
 }
