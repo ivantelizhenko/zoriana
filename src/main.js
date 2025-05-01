@@ -1,5 +1,23 @@
 "use strict";
 
+// Toask component
+const toast = document.querySelector(".toast-subscribe--success");
+
+function showToast() {
+  toast.style.display = "block";
+  toast.style.animationName = "liftUp";
+}
+
+function closeToast() {
+  toast.style.transition = "opacity .2s";
+  toast.style.opacity = "0";
+
+  setTimeout(() => {
+    toast.style.display = "none";
+    toast.style.opacity = "1";
+  }, 1000);
+}
+
 // Show Dialog Menu
 const dialogMenu = document.querySelector(".dialog-menu");
 const openDialogMenuButton = document.querySelector("#open-dialog-menu");
@@ -15,26 +33,42 @@ closeDialogMenuButton.addEventListener("click", () => {
   dialogMenu.style.display = "none";
 });
 
-// Show Dialog Follow
-const dialogFollow = document.querySelector(".dialog-follow");
-const openDialogFollowButton = document.querySelectorAll(".open-dialog-follow");
-const closeDialogFollowButton = document.querySelector("#close-dialog-follow");
-
-console.log(dialogFollow);
-console.log(dialogMenu);
-
-openDialogFollowButton.forEach((button) =>
-  button.addEventListener("click", () => {
-    if (dialogMenu.open) {
-      setTimeout(() => dialogMenu.close(), 0);
-      dialogMenu.style.display = "none";
-    }
-    dialogFollow.showModal();
-    dialogFollow.style.display = "grid";
-  })
+// Show Dialog Subscribe
+const dialogSubscribe = document.querySelector(".dialog-subscribe");
+const openDialogSubscribeButton = document.querySelectorAll(
+  ".open-dialog-subscribe"
+);
+const closeDialogSubscribeButton = document.querySelector(
+  "#close-dialog-subscribe"
 );
 
-closeDialogFollowButton.addEventListener("click", () => {
-  dialogFollow.close();
-  dialogFollow.style.display = "none";
+openDialogSubscribeButton.forEach((button) =>
+  button.addEventListener("click", openSubscribeDialog)
+);
+closeDialogSubscribeButton.addEventListener("click", closeSubscribeDialog);
+
+function openSubscribeDialog() {
+  if (dialogMenu.open) {
+    setTimeout(() => dialogMenu.close(), 0);
+    dialogMenu.style.display = "none";
+  }
+  dialogSubscribe.showModal();
+  dialogSubscribe.style.display = "grid";
+}
+
+function closeSubscribeDialog() {
+  dialogSubscribe.close();
+  dialogSubscribe.style.display = "none";
+}
+
+// Handle submit subcribe form
+const subscribeForm = document.querySelector(".dialog-subscribe__form");
+
+subscribeForm.addEventListener("submit", (e) => {
+  subscribeForm.reset();
+  e.preventDefault();
+  closeSubscribeDialog();
+  showToast();
+
+  setTimeout(closeToast, 3000);
 });

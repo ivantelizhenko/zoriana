@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" type="text/css" href="./src/styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/animations.css" />
     <link rel="stylesheet" type="text/css" href="./src/styles/components.css" />
     <link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
     <title>App</title>
@@ -27,7 +28,7 @@
         </ul>
       </nav>
       <button
-        class="open-dialog-follow open-dialog-follow-desktop button button--fill"
+        class="open-dialog-subscribe open-dialog-subscribe-desktop button button--fill"
       >
         Subscribe
       </button>
@@ -86,12 +87,14 @@
           <li><button class="nav__item">News</button></li>
         </ul>
       </nav>
-      <button class="open-dialog-follow button button--fill">Subscribe</button>
+      <button class="open-dialog-subscribe button button--fill">
+        Subscribe
+      </button>
     </dialog>
-    <dialog class="dialog dialog-follow">
+    <dialog class="dialog dialog-subscribe">
       <button
-        class="button button--icon dialog-follow__button--close"
-        id="close-dialog-follow"
+        class="button button--icon dialog-subscribe__button--close"
+        id="close-dialog-subscribe"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -109,18 +112,21 @@
           <line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </button>
-      <div class="dialog-follow__image">
+      <div class="dialog-subscribe__image">
         <img src="/public/subscribe-image.jpg" alt="" />
       </div>
-      <div class="dialog-follow__text">
+      <div class="dialog-subscribe__text">
         <h4 class="heading-4 mb-16">Follow the latest news</h4>
         <p class="sub-heading mb-20">With our daily newsletter</p>
-        <form class="dialog-follow__form">
-          <input placeholder="you@example.com" />
+        <form class="dialog-subscribe__form">
+          <input placeholder="you@example.com" type="email" required />
           <button class="button button--fill" type="submit">Submit</button>
         </form>
       </div>
     </dialog>
+    <div class="toast toast-subscribe--success">
+      Form submitted successfully
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
