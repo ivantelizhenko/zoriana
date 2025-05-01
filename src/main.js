@@ -72,3 +72,12 @@ subscribeForm.addEventListener("submit", (e) => {
 
   setTimeout(closeToast, 3000);
 });
+
+// Open youtube link
+const buttons = document.querySelectorAll("#showYoutube");
+
+buttons.forEach((button) =>
+  button.addEventListener("click", function () {
+    window.open("https://www.youtube.com/@ares_management/featured", "_blank");
+  })
+);

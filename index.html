@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="header">
-      <img src="public/logo.svg" alt="Logo" class="logo" />
+      <img src="./logo.svg" alt="Logo" class="logo" />
       <nav class="header__navigation">
         <ul>
           <li><button class="nav__item">About us</button></li>
@@ -51,7 +51,7 @@
       </button>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero">
         <div class="hero__text-container">
           <h1 class="heading--1 hero__heading">Ares Capital Corporation</h1>
@@ -158,11 +158,74 @@
           </div>
         </div>
       </section>
+      <section class="videos">
+        <div class="video">
+          <h2 class="video__heading">Bloomberg TV: Private credit</h2>
+          <div class="video__wrapper--minor">
+            <h3 class="video__text">Kipp deVeer Head of Ares Credit Group</h3>
+            <img src="./logo-white.svg" alt="Logo" class="logo video__logo" />
+          </div>
+
+          <button class="button button--icon" id="showYoutube">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--color-accent)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-arrow-up-right"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </button>
+        </div>
+        <div class="video">
+          <h2 class="video__heading">The Rise of Private Markets</h2>
+          <div class="video__wrapper--minor">
+            <h3 class="video__text">
+              Secular Trends in Non-Bank Lending and Their Economic Implications
+            </h3>
+            <img src="./logo-white.svg" alt="Logo" class="logo video__logo" />
+          </div>
+          <button class="button button--icon" id="showYoutube">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--color-accent)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-arrow-up-right"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="dialog-subscribe__text">
+          <h4 class="heading--4 mb-16">Follow the latest news</h4>
+          <p class="dialog__sub-heading mb-20">With our daily newsletter</p>
+          <form class="dialog-subscribe__form">
+            <input placeholder="you@example.com" type="email" required />
+            <button class="button button--fill" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <dialog class="dialog dialog-menu">
       <header class="dialog-menu__header">
-        <img src="public/logo.svg" alt="Logo" class="logo" />
+        <img src="./logo.svg" alt="Logo" class="logo" />
         <button
           class="button button--icon dialog-menu__button--close"
           id="close-dialog-menu"
@@ -217,7 +280,7 @@
         </svg>
       </button>
       <div class="dialog-subscribe__image">
-        <img src="/public/subscribe-image.jpg" alt="" />
+        <img src="./subscribe-image.jpg" alt="" />
       </div>
       <div class="dialog-subscribe__text">
         <h4 class="heading--4 mb-16">Follow the latest news</h4>
@@ -231,6 +294,6 @@
     <div class="toast toast-subscribe--success">
       Form submitted successfully
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
