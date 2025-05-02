@@ -88,10 +88,7 @@ buttons.forEach((button) =>
 // Routing
 // Page can be:  main | contact | news | newDetails | notFound
 const pages = document.querySelectorAll(".page");
-// const initialPage = document.getElementById("main");
-
-// TEMPORARY:
-const initialPage = document.getElementById("newDetails");
+const initialPage = document.getElementById("main");
 
 function clearPages() {
   pages.forEach((page) => (page.style.display = "none"));

@@ -689,10 +689,32 @@
           </div>
         </div>
         <div class="new-details__button-container">
-          <button class="new-details__button--back">Back</button>
+          <button
+            class="new-details__button--back"
+            id="toPage"
+            data-page-name="news"
+          >
+            Back
+          </button>
         </div>
       </div>
-      <div class="page" id="notFound">notFound</div>
+      <div class="page" id="notFound">
+        <div class="not-found__wrapper">
+          <h2 class="not-found__text">
+            Sorry :( <br />
+            Page Not Found
+          </h2>
+          <div class="not-found__button-container">
+            <button
+              class="button button--fill not-found__button--back"
+              id="toPage"
+              data-page-name="main"
+            >
+              Back to home
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
