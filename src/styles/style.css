@@ -346,8 +346,9 @@
   .sub-hero__text-container {
     padding: 32px 0;
     display: flex;
-    border-bottom: (--divider);
+    border-bottom: var(--divider);
     gap: clamp(2.5rem, 13.8vw - 5.25rem, 8.125rem);
+    position: relative;
   }
 
   .sub-hero__sub-heading {
