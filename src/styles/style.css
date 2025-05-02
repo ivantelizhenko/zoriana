@@ -32,6 +32,10 @@
   h3 {
     font-family: Frank Ruhl Libre, sans-serif;
   }
+
+  #toPage {
+    cursor: pointer;
+  }
 }
 
 @layer components {
@@ -145,6 +149,7 @@
   }
 }
 
+/* main page */
 @layer main {
   /*/////////////////////////////////*/
   /*            HEADER               */
@@ -562,6 +567,77 @@
   }
 }
 
+/* contact page*/
+@layer main {
+  /*/////////////////////////////////*/
+  /*            Breadcrumbs               */
+  /*/////////////////////////////////*/
+  .breadcrumbs {
+    padding: 24px 0;
+    margin-bottom: 48px;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .breadcrumbs__item {
+    color: var(--color-gray);
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &:last-child {
+      .breadcrumbs__item-icon {
+        display: none;
+      }
+    }
+  }
+  .breadcrumbs__item--active {
+    color: var(--color-accent);
+  }
+
+  .contact__image {
+    & img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  /*/////////////////////////////////*/
+  /*            Contacts             */
+  /*/////////////////////////////////*/
+
+  .contact__heading {
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-accent);
+    padding: 40px 0 48px;
+  }
+
+  .contact__contacts {
+    display: flex;
+    gap: 88px;
+    padding-bottom: 64px;
+  }
+
+  .contacts__column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .contacts__heading {
+    height: fit-content;
+  }
+}
+
+/* main page */
 @layer media {
   @media (max-width: 1000px) {
     .helping-business .items__container {
@@ -843,6 +919,50 @@
 
     .footer .button {
       margin: 0;
+    }
+  }
+}
+
+/* contacts page*/
+@layer media {
+  @media (max-width: 750px) {
+    /*/////////////////////////////////*/
+    /*            Breadcrumbs               */
+    /*/////////////////////////////////*/
+    .breadcrumbs {
+      margin-bottom: 0;
+      & ul {
+        gap: 8px;
+      }
+    }
+
+    .breadcrumbs__item {
+      gap: 8px;
+    }
+
+    .contact__image {
+      width: calc(100% + 2 * var(--section-horizontal-padding));
+      margin-left: calc(-1 * var(--section-horizontal-padding));
+      margin-right: calc(-1 * var(--section-horizontal-padding));
+    }
+
+    /*/////////////////////////////////*/
+    /*            Contacts             */
+    /*/////////////////////////////////*/
+
+    .contact__heading {
+      font-size: 2rem;
+      padding: 24px 0;
+    }
+
+    .contact__contacts {
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 36px;
+    }
+
+    .contacts__heading {
+      font-size: 1.25rem;
     }
   }
 }
