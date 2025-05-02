@@ -84,3 +84,24 @@ buttons.forEach((button) =>
     window.open("https://www.youtube.com/@ares_management/featured", "_blank");
   })
 );
+
+// Routing
+// Page can be:  main | contact | news | newDetails | notFound
+const pages = document.querySelectorAll(".page");
+const initialPage = document.getElementById("main");
+
+function clearPages() {
+  pages.forEach((page) => (page.style.display = "none"));
+}
+clearPages();
+initialPage.style.display = "revert";
+
+const buttonsToPage = document.querySelectorAll("#toPage");
+buttonsToPage.forEach((button) =>
+  button.addEventListener("click", () => {
+    const pageName = button.dataset.pageName || null;
+    const curPage = document.getElementById(pageName);
+    clearPages();
+    curPage.style.display = "revert";
+  })
+);

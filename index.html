@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="data:," />
+    <!-- <link rel="icon" type="image/svg" href="/logo-white.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,16 +15,34 @@
     <link rel="stylesheet" type="text/css" href="./src/styles/general.css" />
     <link rel="stylesheet" type="text/css" href="./src/styles/animations.css" />
     <link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
-    <title>App</title>
+    <title>Ares</title>
   </head>
   <body>
     <header class="header">
-      <img src="./logo.svg" alt="Logo" class="logo" />
+      <img
+        src="./logo.svg"
+        alt="Logo"
+        class="logo"
+        id="toPage"
+        data-page-name="main"
+      />
       <nav class="header__navigation">
         <ul>
-          <li><button class="nav__item">About us</button></li>
-          <li><button class="nav__item">Contact</button></li>
-          <li><button class="nav__item">News</button></li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="notFound">
+              About us
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="contact">
+              Contact
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="news">
+              News
+            </button>
+          </li>
         </ul>
       </nav>
       <button
@@ -51,7 +70,7 @@
       </button>
     </header>
 
-    <main id="main">
+    <main class="page" id="main">
       <section class="hero">
         <div class="hero__text-container">
           <h1 class="heading--1 hero__heading">Ares Capital Corporation</h1>
@@ -113,7 +132,9 @@
       <section class="news-preview">
         <div class="header-np">
           <h3 class="heading--3">Latest News & Views</h3>
-          <button class="button button-more">View All</button>
+          <button class="button button-more" id="toPage" data-page-name="news">
+            View All
+          </button>
         </div>
         <div class="items">
           <div class="item">
@@ -122,7 +143,13 @@
               Officer
             </p>
             <div class="info">
-              <button class="button button-more">More</button>
+              <button
+                class="button button-more"
+                id="toPage"
+                data-page-name="newDetails"
+              >
+                More
+              </button>
               <span class="data">Nov 09/2023</span>
             </div>
           </div>
@@ -132,7 +159,13 @@
               Results and...
             </p>
             <div class="info">
-              <button class="button button-more">More</button>
+              <button
+                class="button button-more"
+                id="toPage"
+                data-page-name="notFound"
+              >
+                More
+              </button>
               <span class="data">Oct 24/2023</span>
             </div>
           </div>
@@ -142,7 +175,13 @@
               Quarter...
             </p>
             <div class="info">
-              <button class="button button-more">More</button>
+              <button
+                class="button button-more"
+                id="toPage"
+                data-page-name="notFound"
+              >
+                More
+              </button>
               <span class="data">Oct 02/2023</span>
             </div>
           </div>
@@ -152,7 +191,13 @@
               7.000%...
             </p>
             <div class="info">
-              <button class="button button-more">More</button>
+              <button
+                class="button button-more"
+                id="toPage"
+                data-page-name="notFound"
+              >
+                More
+              </button>
               <span class="data">Jul 27/2023</span>
             </div>
           </div>
@@ -222,14 +267,36 @@
         </div>
       </section>
     </main>
+    <main class="page" id="contact">contact</main>
+    <main class="page" id="news">news</main>
+    <main class="page" id="newDetails">newDetails</main>
+    <main class="page" id="notFound">notFound</main>
 
     <footer class="footer">
-      <img src="./logo-white.svg" alt="Logo" class="logo footer__logo" />
+      <img
+        src="./logo-white.svg"
+        alt="Logo"
+        class="logo footer__logo"
+        id="toPage"
+        data-page-name="main"
+      />
       <nav class="footer__navigation">
         <ul>
-          <li><button class="nav__item">About us</button></li>
-          <li><button class="nav__item">Contact</button></li>
-          <li><button class="nav__item">News</button></li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="notFound">
+              About us
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="contact">
+              Contact
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="news">
+              News
+            </button>
+          </li>
         </ul>
       </nav>
       <button class="button button--icon" id="showYoutube">
@@ -289,9 +356,21 @@
       </header>
       <nav class="dialog-menu__navigation">
         <ul>
-          <li><button class="nav__item">About us</button></li>
-          <li><button class="nav__item">Contact</button></li>
-          <li><button class="nav__item">News</button></li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="notFound">
+              About us
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="contact">
+              Contact
+            </button>
+          </li>
+          <li>
+            <button class="nav__item" id="toPage" data-page-name="news">
+              News
+            </button>
+          </li>
         </ul>
       </nav>
       <button class="open-dialog-subscribe button button--fill">

@@ -163,6 +163,7 @@
   .logo {
     display: block;
     object-fit: cover;
+    cursor: pointer;
   }
 
   .header__navigation ul {
