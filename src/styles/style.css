@@ -867,11 +867,13 @@
 
     .dialog-subscribe__text {
       text-align: center;
+      padding: 25px 0;
+      margin: 0 auto;
     }
 
     .dialog-subscribe__form {
       display: grid;
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 1fr;
     }
 
     .dialog-subscribe__button--close {
