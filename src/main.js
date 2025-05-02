@@ -4,6 +4,7 @@
 const toast = document.querySelector(".toast-subscribe--success");
 
 function showToast() {
+  console.log("toast");
   toast.style.display = "block";
   toast.style.animationName = "liftUp";
 }
@@ -62,16 +63,18 @@ function closeSubscribeDialog() {
 }
 
 // Handle submit subcribe form
-const subscribeForm = document.querySelector(".dialog-subscribe__form");
+const subscribeForms = document.querySelectorAll(".dialog-subscribe__form");
 
-subscribeForm.addEventListener("submit", (e) => {
-  subscribeForm.reset();
-  e.preventDefault();
-  closeSubscribeDialog();
-  showToast();
+subscribeForms.forEach((form) =>
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    form.reset();
+    closeSubscribeDialog();
+    showToast();
 
-  setTimeout(closeToast, 3000);
-});
+    setTimeout(closeToast, 3000);
+  })
+);
 
 // Open youtube link
 const buttons = document.querySelectorAll("#showYoutube");
