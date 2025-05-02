@@ -29,10 +29,12 @@ openDialogMenuButton.addEventListener("click", () => {
   dialogMenu.style.display = "grid";
 });
 
-closeDialogMenuButton.addEventListener("click", () => {
+closeDialogMenuButton.addEventListener("click", closeMenuDialog);
+
+function closeMenuDialog() {
   dialogMenu.close();
   dialogMenu.style.display = "none";
-});
+}
 
 // Show Dialog Subscribe
 const dialogSubscribe = document.querySelector(".dialog-subscribe");
@@ -102,6 +104,7 @@ buttonsToPage.forEach((button) =>
     const pageName = button.dataset.pageName || null;
     const curPage = document.getElementById(pageName);
     clearPages();
+    closeMenuDialog();
     curPage.style.display = "revert";
   })
 );
