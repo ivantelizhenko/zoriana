@@ -91,7 +91,7 @@ const pages = document.querySelectorAll(".page");
 // const initialPage = document.getElementById("main");
 
 // TEMPORARY:
-const initialPage = document.getElementById("news");
+const initialPage = document.getElementById("newDetails");
 
 function clearPages() {
   pages.forEach((page) => (page.style.display = "none"));
